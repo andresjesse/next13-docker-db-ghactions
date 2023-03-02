@@ -22,7 +22,7 @@ export default function Home({ usersWithPosts }: HomeProps) {
         <h1>Users With Posts</h1>
 
         {usersWithPosts.map((u) => (
-          <>
+          <div key={u.id}>
             <h2>
               {u.id}: {u.name}
             </h2>
@@ -31,15 +31,15 @@ export default function Home({ usersWithPosts }: HomeProps) {
             {u.posts
               .filter((p) => p.published)
               .map((p) => (
-                <>
+                <div key={p.id}>
                   <h3>Posts:</h3>
                   <h4>
                     {p.id} - {p.title}
                   </h4>
                   <span>{p.content}</span>
-                </>
+                </div>
               ))}
-          </>
+          </div>
         ))}
       </main>
     </>
