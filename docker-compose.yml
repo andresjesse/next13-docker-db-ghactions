@@ -12,3 +12,15 @@ services:
       - 3000:3000
     volumes:
       - ./:/app/
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

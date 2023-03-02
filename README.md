@@ -10,3 +10,9 @@ Run with docker:
 
 - Regular: `$ docker compose up`
 - Rebuilding (if changed docker configs): `$ docker compose up --build --force-recreate`
+
+# Postgres Database
+
+Connection string:
+
+Adminer interface: http://localhost:8080 (user=`postgres`, password=`postgres`)
