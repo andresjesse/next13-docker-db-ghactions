@@ -30,4 +30,4 @@ Seed: `$ npx prisma db seed`
 Notes:
 
 - Check prisma seed script in `package.json` for ts-node execution details (prevents syntax error on "import" statement).
-- Check `lib/prisma.ts` for details about prisma initialization with NextJS.
+- Check `src/lib/prisma.ts` for details about prisma initialization with NextJS.
