@@ -22,3 +22,12 @@ Adminer interface: http://localhost:8080 (user=`postgres`, password=`postgres`)
 Prisma commands must be executed from inside `app` container!
 
 Migrate: `$ npx prisma migrate dev`
+
+Generate client: `$ npx prisma generate`
+
+Seed: `$ npx prisma db seed`
+
+Notes:
+
+- Check prisma seed script in `package.json` for ts-node execution details (prevents syntax error on "import" statement).
+- Check `lib/prisma.ts` for details about prisma initialization with NextJS.
