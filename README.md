@@ -16,3 +16,9 @@ Run with docker:
 Connection string:
 
 Adminer interface: http://localhost:8080 (user=`postgres`, password=`postgres`)
+
+# Prisma ORM
+
+Prisma commands must be executed from inside `app` container!
+
+Migrate: `$ npx prisma migrate dev`
