@@ -1,10 +1,10 @@
 This is an experiment with: NextJS 13, Docker, Prisma, Postgres and Github Actions
 
-# Running Locally
+# Running in Development
 
 Copy and fill environment variables:
 
-- `$ cp .env.development.local.example .env.development.local`
+- `$ cp .env.example .env`
 
 Run with docker:
 
@@ -13,13 +13,13 @@ Run with docker:
 
 # Postgres Database
 
-Connection string:
+Connection string is already set in `.env.example`
 
 Adminer interface: http://localhost:8080 (user=`postgres`, password=`postgres`)
 
 # Prisma ORM
 
-Prisma commands must be executed from inside `app` container!
+Prisma commands must be executed from inside `app` container! You can use this command to enter app container: `$ docker compose exec app bash`
 
 Migrate: `$ npx prisma migrate dev`
 
