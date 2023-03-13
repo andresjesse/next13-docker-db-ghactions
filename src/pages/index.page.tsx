@@ -19,7 +19,7 @@ export default function Home({ usersWithPosts }: HomeProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Users With Posts</h1>
+        <h1>Users with posts</h1>
 
         {usersWithPosts.map((u) => (
           <div key={u.id}>
