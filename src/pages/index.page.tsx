@@ -10,6 +10,8 @@ interface HomeProps {
 }
 
 export default function Home({ usersWithPosts }: HomeProps) {
+  const a = 10;
+
   return (
     <>
       <Head>
