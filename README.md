@@ -34,7 +34,7 @@ Notes:
 
 # Deploy to production
 
-- Regular: `$ docker compose up`
+- Regular: `$ docker compose -f docker-compose.production.yml up`
 - Rebuilding (if changed docker configs): `$ docker compose -f docker-compose.production.yml up --force-recreate`
 
 docker compose exec app npx prisma migrate deploy
