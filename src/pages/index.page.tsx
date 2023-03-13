@@ -1,17 +1,15 @@
-import prisma from "@/lib/prisma";
-import { Post, User } from "@prisma/client";
-import { GetServerSideProps } from "next";
-import Head from "next/head";
+import prisma from '@/lib/prisma'
+import { Post, User } from '@prisma/client'
+import { GetServerSideProps } from 'next'
+import Head from 'next/head'
 
 interface HomeProps {
   usersWithPosts: (User & {
-    posts: Post[];
-  })[];
+    posts: Post[]
+  })[]
 }
 
 export default function Home({ usersWithPosts }: HomeProps) {
-  const a = 10;
-
   return (
     <>
       <Head>
@@ -45,19 +43,19 @@ export default function Home({ usersWithPosts }: HomeProps) {
         ))}
       </main>
     </>
-  );
+  )
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const usersWithPosts = await prisma.user.findMany({
     include: {
       posts: true,
     },
-  });
+  })
 
   return {
     props: {
       usersWithPosts,
     },
-  };
-};
+  }
+}
